@@ -14,12 +14,11 @@ namespace Mine.Services
         {
             items = new List<ItemModel>()
             {
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." }
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Dragon Cry", Description="Falling fire balls.", Value=3 },
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Ultear", Description="Healfull health.", Value=2},
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Fairy Law", Description="Reflect damage received.", Value=3 },
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Celestial Key", Description="Call a celestial to support in fighting.", Value=4 },
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "END Book", Description="End the life of selected monster.", Value=5 },
             };
         }
 
