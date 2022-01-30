@@ -66,9 +66,23 @@ namespace Mine.Services
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        ///  Take an ID and return the ItemModel
+        ///  use Linq to find the record that matches the ID from the Database with the Table named ItemModel
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Task<ItemModel> ReadAsync(string id)
         {
-            throw new NotImplementedException();
+            if (id == null) {
+                return null;
+            }
+
+            // Call the Database to read the ID
+            // Using Linq syntax Find the first record that has the ID that matches
+            var result = Database.Table<ItemModel>().FirstOrDefaultAsync(m => m.Id.Equals(id));
+
+            return result;
         }
 
         /// <summary>
