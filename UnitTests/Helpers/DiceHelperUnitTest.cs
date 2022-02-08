@@ -14,7 +14,7 @@ namespace UnitTests.Helpers
             // Arrange
 
             // Act
-            var result = DiceHelper.RollDice(0,1);
+            var result = DiceHelper.RollDice(0, 1);
 
             // Reset
 
@@ -57,13 +57,13 @@ namespace UnitTests.Helpers
             DiceHelper.ForceRandomValue = 1;
 
             // Act
-            var result = DiceHelper.RollDice(1,1);
+            var result = DiceHelper.RollDice(1, 1);
 
             // Reset
             DiceHelper.ForceRollsToNotRandom = false;
 
             // Assert
-            Assert.AreEqual(1,result);
+            Assert.AreEqual(1, result);
 
         }
 
@@ -72,13 +72,27 @@ namespace UnitTests.Helpers
             // Arrange
 
             // Act
-            var result = DiceHelper.RollDice(2,6);
+            var result = DiceHelper.RollDice(2, 6);
 
             // Reset
 
             // Assert
             Assert.AreEqual(true, result >= 2);
             Assert.AreEqual(true, result <= 12);
+        }
+
+        [Test]
+        public void RollDice_Invalid_Roll_0_Dice_10_Should_Return_Zero(){
+            // Arrange
+
+            // Act
+            var result = DiceHelper.RollDice(0,10);
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(0, result);
+
         }
     }
 }
